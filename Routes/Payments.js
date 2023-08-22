@@ -56,7 +56,7 @@ paymentRouter.post("/paymentverification", async (req, res) => {
   const isAuthentic = expectedSignature === razorpay_signature;
   if (isAuthentic) {
     res.redirect(
-      `http://localhost:3000/bookingsuccess?reference=${razorpay_payment_id}`
+      `https://v-design0.netlify.app/bookingsuccess?reference=${razorpay_payment_id}`
     );
     const filter = { orderId: req.body.razorpay_order_id };
     const update = {
